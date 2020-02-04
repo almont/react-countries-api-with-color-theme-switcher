@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800&display=swap');
+
+$Dark-Blue: hsl(209, 23%, 22%); // Dark Mode Elements
+$Very-Dark-Blue-Background: hsl(207, 26%, 17%); // Dark Mode Background
+$Very-Dark-Blue-Text: hsl(200, 15%, 8%); // Light Mode Text
+$Dark-Gray: hsl(0, 0%, 52%); // Light Mode Input
+$Very-Light-Gray: hsl(0, 0%, 98%); // Light Mode Background
+$White: hsl(0, 0%, 100%); // Dark Mode Text & Light Mode Elements
+
+@mixin nunito-sans-300 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+}
+
+@mixin nunito-sans-600 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+
+@mixin nunito-sans-800 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    @include nunito-sans-300;
+    font-size: 16px;
+    color: $Dark-Blue;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #ffffff;
+}
+
+input,
+button {
+    outline: 0;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+}
+
+.theme-dark-mode-off {
+    color: $Very-Dark-Blue-Text;
+    background-color: $White;
+}
+
+.theme-dark-mode-on {
+    color: $Very-Dark-Blue-Text;
+    background-color: $White;
+}

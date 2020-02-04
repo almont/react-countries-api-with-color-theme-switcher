@@ -1,0 +1,39 @@
+nav {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .wrapper {
+        grid-column: 2 / 12;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        h1 {
+            flex-grow: 10;
+        }
+
+        .toggle-theme {
+            flex-grow: 2;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            .button-theme {
+                padding: 10px;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                color: inherit;
+
+                p {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
